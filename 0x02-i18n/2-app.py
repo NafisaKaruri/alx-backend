@@ -2,7 +2,7 @@
 """
 Flask app with dynamic locale detection based on request headers.
 """
-from flask imporrt Flask, render_template, request
+from flask import Flask, render_template, request
 from flask_babel import Babel, _
 
 app = Flask(__name__)
