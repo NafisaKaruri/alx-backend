@@ -37,7 +37,7 @@ def get_user():
 
 @app.before_request
 def before_request() -> None:
-    """"""
+    """Sets the current user on `flask.g` before each request."""
     user = get_user()
     g.user = user
 
