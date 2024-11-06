@@ -52,7 +52,7 @@ def get_locale():
     # From user
     if g.user:
         locale = g.user.get('locale')
-        if locate and locale in app.config['LANGUAGES']:
+        if locale and locale in app.config['LANGUAGES']:
             return locale
     # From request header
     locale = request.headers.get('locale', None)
