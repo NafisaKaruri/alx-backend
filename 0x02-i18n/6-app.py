@@ -47,7 +47,7 @@ def get_locale():
     """Determine the best match with our supported languages."""
     # From URL
     locale = request.args.get('locale')
-    if locale in app.config['LANGUAGES']:
+    if locale and locale in app.config['LANGUAGES']:
         return locale
     # From user
     if g.user:
